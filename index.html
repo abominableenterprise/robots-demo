@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="A small crew of friendly robots. Pick a pal and say hello!">
+  <title>Robot Roll Call</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="robots.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <span class="badge">A little hello goes a long way</span>
+      <h1>Robot<br>Roll Call<span class="title-dot">.</span></h1>
+      <p>Small robots. Big personalities.<br>Meet the crew and make a new friend.</p>
+    </header>
+    <section class="crew" aria-label="Meet the robots"></section>
+    <noscript><p>Turn on JavaScript to meet the robot crew.</p></noscript>
+    <footer>Made for friendly experiments with <strong>The Robots</strong>.<br>
+      One small change. A whole new possibility.</footer>
+  </main>
+  <template id="robot-card">
+    <article class="card">
+      <div class="portrait" aria-hidden="true">
+        <div class="antenna"></div>
+        <div class="robot-head"><span class="eye"></span><span class="eye"></span><span class="mouth"></span></div>
+        <div class="robot-body"></div>
+        <svg class="hand" viewBox="0 0 40 48"><path d="M10 26V12a3 3 0 0 1 6 0v10V6a3 3 0 0 1 6 0v16V9a3 3 0 0 1 6 0v14V15a3 3 0 0 1 6 0v17c0 15-20 19-25 6L3 27a3 3 0 0 1 5-3l5 7"/></svg>
+      </div>
+      <div class="card-content">
+        <h2></h2>
+        <p class="job"></p>
+        <p class="speech" role="status" aria-live="polite"></p>
+        <button type="button">Say hi <span aria-hidden="true">↗</span></button>
+      </div>
+    </article>
+  </template>
+</body>
+</html>
